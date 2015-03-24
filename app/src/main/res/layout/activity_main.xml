@@ -1,0 +1,66 @@
+<com.ideafragments.todo.app.MyDrawerContainerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.ideafragments.todo.app.MainActivity"
+                android:id="@+id/activity_container"
+                android:background="#222"
+        android:clickable="true">
+
+
+    <fragment android:layout_width="@dimen/left_drawer_width" android:layout_height="match_parent"
+              android:id="@+id/leftPanel"
+              android:layout_alignParentLeft="true"
+              android:layout_alignParentStart="true"
+              android:layout_marginLeft="-150dp"
+              android:layout_marginStart="-150dp"
+              android:name="com.ideafragments.todo.app.LeftDrawerFragment"
+              tools:layout="@layout/fragment_left_drawer"
+            />
+
+    <fragment android:layout_width="250dp" android:layout_height="match_parent"
+              android:id="@+id/rightPanel"
+              android:layout_alignParentRight="true"
+              android:layout_alignParentEnd="true"
+              android:layout_marginEnd="-250dp"
+              android:layout_marginRight="-250dp"
+              android:name="android.support.v4.app.ListFragment"
+              tools:layout="@android:layout/expandable_list_content"/>
+
+    <View android:layout_width="12dp" android:layout_height="match_parent"
+          android:id="@+id/left_drawer_shadow"
+          android:background="@drawable/left_drawer_shadow"
+          android:layout_marginLeft="-12dp"
+          android:layout_marginStart="-12dp"/>
+
+
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:id="@+id/centerViewContainer">
+
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                     android:layout_marginTop="56dp"
+                     android:id="@+id/centerView"
+                     android:layout_alignParentLeft="true"
+                     android:layout_alignParentStart="true"
+                     android:background="#ddd"/>
+
+        <View android:layout_width="match_parent" android:layout_height="14dp"
+              android:layout_marginTop="49dp"
+              android:background="@drawable/toolbar_shadow"
+                />
+        <View android:layout_width="match_parent" android:layout_height="54dp"
+                        android:background="@color/primaryDark"/>
+
+        <include layout="@layout/toolbar"
+                 android:id="@+id/toolbar"
+                />
+
+
+    </RelativeLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="10dp"
+          android:background="@drawable/statusbar_shadow"
+            android:layout_marginTop="-5dp"/>
+
+
+</com.ideafragments.todo.app.MyDrawerContainerLayout>

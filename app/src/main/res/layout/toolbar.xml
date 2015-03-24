@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              tools:context=""
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="56dp"
+              android:background="@color/primary"
+        android:padding="0dp"
+        android:layout_marginLeft="-15dp"
+        android:layout_marginStart="-15dp">
+
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="200dp" android:layout_height="200dp"
+                   android:layout_marginLeft="-50dp"
+                   android:layout_marginStart="-50dp"
+                   android:layout_marginTop="-20dp"
+
+                android:src="@drawable/toolbar_bg"
+                android:scaleType="matrix"/>
+        <ImageView android:layout_width="200dp" android:layout_height="200dp"
+                   android:layout_marginLeft="-50dp"
+                   android:layout_marginStart="-50dp"
+                   android:layout_marginTop="-22dp"
+
+                   android:src="@drawable/toolbar_circle_shadow"
+                   android:scaleType="matrix"/>
+
+        <RelativeLayout android:layout_width="56dp" android:layout_height="match_parent"
+                        android:id="@+id/leftDrawerButton"
+                        android:padding="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true">
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:background="@color/textColor"
+                  android:layout_alignParentTop="true"/>
+            <View android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:layout_centerInParent="true"
+                  android:background="@color/textColor"/>
+            <View android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:background="@color/textColor"
+                  android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="@string/app_name"
+                  android:textSize="18sp"
+                  android:layout_toRightOf="@+id/leftDrawerButton"
+                  android:layout_toEndOf="@+id/leftDrawerButton"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginStart="20dp"
+                  android:layout_centerVertical="true"
+                  android:textColor="@color/textColor"/>
+
+        <ImageView android:layout_width="56dp" android:layout_height="56dp"
+                   android:id="@+id/rightDrawerButton"
+                   android:layout_alignParentRight="true"
+                   android:layout_alignParentEnd="true"
+                   android:background="#00ffffff"
+                   android:padding="18dp"
+                   android:tint="@color/textColor"
+                   android:src="@drawable/abc_ic_menu_paste_mtrl_am_alpha"
+                />
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.Toolbar>

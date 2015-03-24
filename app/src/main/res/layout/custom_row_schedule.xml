@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/textColor">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:padding="15dp"
+                  android:id="@+id/list_item_layout"
+                  >
+
+        <RelativeLayout android:layout_width="70dp" android:layout_height="fill_parent">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="HW"
+                      android:textSize="35sp"
+                      android:layout_centerVertical="true"
+                      android:textColor="@color/secondaryLight"
+                      android:fontFamily="sans-serif-medium"
+                    />
+        </RelativeLayout>
+
+
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/time"
+                          android:layout_alignParentEnd="true"
+                          android:layout_alignParentRight="true"
+                          android:text="12:00 P"
+                          android:fontFamily="sans-serif-medium"
+                          android:textSize="14sp"/>
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/atHeader"
+                          android:layout_toLeftOf="@id/time"
+                          android:layout_toStartOf="@id/time"
+                          android:text="\t\@ "
+                          android:fontFamily="sans-serif-medium"
+                          android:textSize="14sp"/>
+
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/date"
+                          android:layout_toLeftOf="@id/atHeader"
+                          android:layout_toStartOf="@id/atHeader"
+                          android:text="May 20"
+                          android:fontFamily="sans-serif-medium"
+                          android:textSize="14sp"/>
+
+            </RelativeLayout>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="2dp"
+                      android:layout_gravity="start"
+                      android:id="@+id/taskTitle"
+                      android:textStyle="bold"
+                      android:text="Schedule Task Title"
+                      android:textSize="16sp"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:maxLines="1"
+                      android:layout_marginTop="2dp"
+                      android:layout_gravity="start"
+                      android:id="@+id/taskBody"
+                      android:text="Task Info"
+                      android:textSize="12sp"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="end"
+                      android:layout_marginTop="5dp"
+                      android:id="@+id/status"
+                      android:text="Status: "
+                      android:textSize="12sp"
+                    android:textColor="@color/secondaryLight"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View android:layout_width="fill_parent" android:layout_height="2dp"
+          android:layout_below="@+id/list_item_layout"
+          android:background="#ddd"/>
+</RelativeLayout>
