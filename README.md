@@ -5,4 +5,4 @@ There is still alot of work to be done. Drawer movement based on user gestures h
 
 After that I will clean up the code quite a bit.
 
-Anyone who comes across this is welcome to branch.
+Anyone who comes across this is welcome to branch/fork and edit. However, do NOT edit the master fork
